@@ -12,13 +12,14 @@
     clip-path: polygon( 0 0, 100% 0, 100% 75vh, 0 100% );
 
     &__logo-box {
-        position: fixed;
-        top: -4rem;
-        left: 0rem;
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
     }
 
     &__logo {
-        height: 3.5rem;
+        height: 5rem;
+        width: auto;
     }
     
     &__text-box {
