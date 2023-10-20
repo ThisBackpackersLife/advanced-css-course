@@ -139,6 +139,22 @@ body {
   margin-top: 10rem;
 }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.15;
+  overflow: hidden;
+}
+.bg-video__content {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -392,7 +408,7 @@ body {
   width: 75%;
   margin: 0 auto;
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.6);
   border-radius: 3px;
   padding: 6rem;
   padding-left: 9rem;
@@ -445,7 +461,7 @@ body {
 }
 
 .row {
-  max-width: 114 rem;
+  max-width: 114rem;
   margin: 0 auto;
 }
 .row:not(:last-child) {
@@ -460,25 +476,25 @@ body {
   float: left;
 }
 .row [class^=col-]:not(:last-child) {
-  margin-right: 2rem;
+  margin-right: 3rem;
 }
 .row .col-1-of-2 {
-  width: calc(( 100% - 2rem ) / 2);
+  width: calc(( 100% - 3rem ) / 2);
 }
 .row .col-1-of-3 {
-  width: calc(( 100% - 2 * 2rem ) / 3);
-}
-.row .col-2-of-3 {
-  width: calc( 2 * ( ( 100% - 2 * 2rem ) / 3 ) + 2rem );
+  width: calc(( 100% - 2 * 3rem ) / 3);
 }
 .row .col-1-of-4 {
-  width: calc(( 100% - 3 * 2rem ) / 4);
+  width: calc(( 100% - 3 * 3rem ) / 4);
+}
+.row .col-2-of-3 {
+  width: calc( 2 * ( ( 100% - 2 * 3rem ) / 3 ) + 3rem );
 }
 .row .col-2-of-4 {
-  width: calc( 2 * ( ( 100% - 3 * 2rem ) / 4 ) + 2rem );
+  width: calc( 2 * ( ( 100% - 3 * 3rem ) / 4 ) + 3rem );
 }
 .row .col-3-of-4 {
-  width: calc( 3 * ( ( 100% - 3 * 2rem ) / 4 ) + 2 * 2rem );
+  width: calc( 3 * ( ( 100% - 3 * 3rem ) / 4 ) + 2 * 3rem );
 }
 
 .header {
@@ -531,8 +547,25 @@ body {
 }
 
 .section-stories {
+  position: relative;
   padding: 15rem 0;
-  background-color: #f7f7f7;
+}
+
+.section-book {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
+}
+
+.book {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../../img/nat-10.jpg);
+  background-size: cover;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+  height: 50rem;
+}
+.book__form {
+  width: 50%;
+  padding: 6rem;
 }
 
 /*# sourceMappingURL=style.css.map */
